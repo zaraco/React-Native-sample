@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "link": "^0.1.5",
+    "native-base": "^2.13.12",
     "react": "16.11.0",
-    "react-base": "^0.2.0",
     "react-native": "^0.62.2",
     "react-navigation": "^4.3.9"
   },

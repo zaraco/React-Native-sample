@@ -9,7 +9,7 @@ import {
   Label,
   Text,
 } from 'native-base';
-import {Alert, Button} from 'react-native';
+import {default as Alert, Button} from 'react-native';
 
 class App extends React.Component {
   render() {

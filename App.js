@@ -8,13 +8,18 @@ import {
   Input,
   Label,
   Text,
+  Button,
 } from 'native-base';
-import {default as Alert, Button} from 'react-native';
+import {default as Alert, StyleSheet, View} from 'react-native';
+
+function Separator() {
+  return <View style={styles.separator} />;
+}
 
 class App extends React.Component {
   render() {
     return (
-      <Container>
+      <Container style={styles.container}>
         <Header />
         <Content>
           <Form>
@@ -26,16 +31,33 @@ class App extends React.Component {
               <Label>Password</Label>
               <Input />
             </Item>
-            <Button
-              title="Press me"
-              color="#f194ff"
-              onPress={() => Alert.alert('Button with adjusted color pressed')}
-            />
+            <Separator />
+            <Button transparent>
+              <Text>Dark</Text>
+            </Button>
           </Form>
         </Content>
       </Container>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 20,
+    marginHorizontal: 16,
+  },
+  button: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+});
 
 export default App;
